@@ -1,0 +1,139 @@
+.counter {
+  float:right;
+}
+
+.new-tweet {
+  background-color: lightgrey;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 10px;
+  height:150px;
+}
+
+.new-tweet h2 {
+  border-bottom:1px solid; width:400px; padding-bottom: 5px;
+}
+article.tweetFeed {
+  border-radius: 20px;
+  background-color: white;
+  z-index:-1;
+}
+
+textarea {
+  padding-top: 10px;
+  width:400px;
+  margin: 50;
+  border-radius: 20px;
+
+}
+
+.tweetFeed{
+  width:450px;
+  height:180px;
+  z-index: 0;
+
+}
+header p {
+  height:50px;
+  background-color: white;
+
+}
+
+.head .userlogo {
+  height:50px;
+  width:50px;
+  float:left;
+  margin:5px;
+  border-radius: 10px;
+}
+.username {
+  float:right;
+  width:80px;
+  margin:0;
+  line-height: 3;
+  position:relative;
+  border-radius: 0 10px 10px 0;
+
+
+}
+.name {
+  width:310px;
+  margin:0;
+  line-height: 1.6;
+  font-size: 200%
+}
+
+
+p.tweets {
+  position:relative;
+  width: 450px;
+  height:90px;
+  margin:0;
+  line-height: 3;
+  padding-left: 3px;
+  border-top: 1px solid;
+  background-color: white;
+  border-right: 1px solid;
+  border-left: 1px solid;
+
+}
+
+footer>p {
+  padding-bottom: 10px;
+  position: relative;
+  float:left;
+  height: 30px;
+  border-top: 1px solid;
+  width:450px;
+  margin:0;
+  padding-left:5px;
+}
+p.tweetrFunctions {
+  width: 450px;
+  float:right;
+  margin:0;
+  line-height: 3;
+  position:relative;
+  border-radius: 10px;
+}
+img .tweetrFunctions {
+  width:10px;
+  height:10px;
+  float:right;
+  margin:0 auto;
+  position:relative;
+}
+
+.tweetFeed:hover img.hoverstate {
+  visibility: visible;
+}
+.tweetFeed:hover .tweets {
+  background-color: lightgrey;
+
+}
+img.hoverstate {
+
+  width:30px;
+  height:30px;
+  float:right;
+  margin:0 auto;
+  position:relative;
+  visibility: hidden;
+  border-radius: 10px;
+}
+
+ p {
+
+  float:left;
+  position: relative;
+  z-index: 1;
+}
+
+.flashMsg {
+  font-size: 200%;
+  z-index:51;
+  background-color: white;
+  width: 900px;
+}
+
+
