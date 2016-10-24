@@ -5,6 +5,9 @@
 
 
 $( document ).ready(function() {
+
+  loadTweets();
+
    function creatTweetElement(tweet){
   console.log('this:'+ tweet);
   let tweetEl = `<article>
@@ -23,6 +26,7 @@ $( document ).ready(function() {
                 return tweetEl;
  };
 
+
 function renderTweets(tweets){
   let i = 0;
   $('.tweetFeed').html('');
@@ -34,7 +38,8 @@ function renderTweets(tweets){
       return 1;
     }
       return 0;
-  })
+  });
+
   for( let singleTweet of tweets){
     console.log('that:' + singleTweet);
     tweets[i] = creatTweetElement(singleTweet);
@@ -63,19 +68,19 @@ $(".textInTweet").submit(function(event){
         url: `/tweets`,
         data: tweetText,
         success: (response) => {
-        loadTweets(response);
+        loadTweets();
         },
         fail: console.log('err')
       });
    }
 });
-function loadTweets(tweetText){
-
+function loadTweets(){
+  //data:tweetText,
 
   $.ajax({
     method:'GET',
     url:`/tweets`,
-    data:tweetText,
+
     success: (response)=>{
       renderTweets(response);
     } ,
@@ -85,19 +90,15 @@ function loadTweets(tweetText){
 }
 
   $('.compose').on('click',()=>{
-  console.log('forrealll');
-  $('.new-tweet').slideToggle("fast",()=>{
-    console.log('maybe');
-    if($('.new-tweet').css('display') == 'block' ){
-      console.log('probably');
-      $('textarea').focus();
+
+    $('.new-tweet').slideToggle("fast",()=>{
+
+      if($('.new-tweet').css('display') == 'block' ){
+
+        $('textarea').focus();
     };
   });
-
   });
-
-
-
 });
 
 

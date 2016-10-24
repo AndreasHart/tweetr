@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 db.connect((dbInstance) => {
+  console.log('dbinstance');
   app.use('/tweets', tweetsApi(dbInstance));
 });
 
