@@ -7,9 +7,14 @@ const app         = express();
 
 const tweetsApi  = require('./api/tweets');
 const db         = require('./lib/db');
+const cool = require('cool-ascii-faces');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
 
 db.connect((dbInstance) => {
   console.log('dbinstance');
