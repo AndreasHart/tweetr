@@ -13,7 +13,9 @@ const assert = require('assert');
 module.exports = {
 
   connect: (onConnect) => {
+
     MongoClient.connect(MONGODB_URI, (err, db) => {
+
       console.log('connected');
       if (err) {
         console.log('Could not connect! Unexpected error. Details below.');
@@ -28,15 +30,14 @@ module.exports = {
         },
 
         getTweets: (callback) => {
-          //res.send(documents);
-        return db.collection('tweets').find().toArray((err,documents)=>{
-              // foundtweets(documents);
+          if(err){
+            console.log(err);
+          }
+          return db.collection('tweets').find().toArray((err,documents)=>{
               callback(documents);
-        })
+          })
         }
       }
-
-
     onConnect(dbMethods);
     });
   }

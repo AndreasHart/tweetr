@@ -8,12 +8,10 @@ const tweets  = express.Router();
 module.exports = function(db) {
 
   tweets.get("/", function(req, res) {
-    console.log("tweets get /");
-    let tweets = db.getTweets( data => {
-      console.log("i don't know",data);
+      let tweets = db.getTweets( data => {
       return res.json(data);
 
-    })
+      })
   });
 
   tweets.post("/", function(req, res) {
@@ -21,7 +19,7 @@ module.exports = function(db) {
       res.status(400);
       return res.send("{'error': 'invalid request'}\n");
     }
-    //console.log(req);
+
     const user = req.body.user ? req.body.user : User.generateRandomUser();
     const tweet = {
       user: user,

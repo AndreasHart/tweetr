@@ -17,7 +17,6 @@ app.get('/cool', function(request, response) {
 });
 
 db.connect((dbInstance) => {
-  console.log('dbinstance');
   app.use('/tweets', tweetsApi(dbInstance));
 });
 
