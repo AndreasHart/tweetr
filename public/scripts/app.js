@@ -1,9 +1,5 @@
 'use strict'
 
-
-
-
-
 $( document ).ready(function() {
 
   loadTweets();
@@ -18,11 +14,11 @@ $( document ).ready(function() {
                   </header>
                   <p class='tweets'>${tweet.content.text}<p>
                   <footer class="foot">
-                  <p>${new Date(tweet.created_at)}<img class='hoverstate' src="pictures/flag.png"><img class='hoverstate' src="pictures/retweet.png"><img class='hoverstate' src="pictures/heart.png"></p>
+                  <p>${Math.round((Date.now()-tweet.created_at)/(100*60*60))} minutes ago<img class='hoverstate' src="pictures/flag.png"><img class='hoverstate' src="pictures/retweet.png"><img class='hoverstate' src="pictures/heart.png"></p>
                   </footer>
                   </article>
                 `
-                return tweetEl;
+    return tweetEl;
   };
 
 
@@ -34,11 +30,9 @@ function renderTweets(tweets){
     if(a.created_at > b.created_at){
       return -1;
     }
-
     if(a.created_at < b.created_at){
       return 1;
     }
-
     return 0;
   });
 
