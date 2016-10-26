@@ -4,14 +4,13 @@ const User    = require("../lib/user-helper")
 const express = require('express');
 const tweets  = express.Router();
 
+
 module.exports = function(db) {
 
   tweets.get("/", function(req, res) {
-    let tweets = db.getTweets();
-    // simulate delay
-    setTimeout(() => {
-      return res.json(tweets);
-    }, 300);
+      let tweets = db.getTweets( data => {
+      return res.json(data);
+      })
   });
 
   tweets.post("/", function(req, res) {
@@ -31,7 +30,5 @@ module.exports = function(db) {
     db.saveTweet(tweet);
     return res.send();
   });
-
   return tweets;
-
 }

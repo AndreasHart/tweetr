@@ -7,11 +7,12 @@
   border-top-width:0px;
   float: left;
   top: 0%;
+  margin-bottom: 20px;
   padding-left: 2em;
   margin-left: 2.5em;
   line-height: 2.5;
   font-size: 200%;
-  z-index: 2;
+  z-index: 100;
 }
 
 #nav-bar .logo{
@@ -26,15 +27,14 @@
   height: 80px;
   widows: 80px;
   float: left;
-  z-index:4;
+  z-index:101;
 }
 
 .compose{
-z-index: 5;
+z-index: 105;
 background-color: white;
 border-color: black;
 border-radius:10px;
-
 position:fixed;
 top:0%;
 float:right;
