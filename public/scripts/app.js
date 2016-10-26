@@ -12,7 +12,7 @@ $( document ).ready(function() {
                   <p class ='name'>${tweet.user.name}</p>
                   <p class='username'>${tweet.user.handle}</p>
                   </header>
-                  <p class='tweets'>${tweet.content.text}<p>
+                  <p class='tweets'>${tweet.content.text}</p>
                   <footer class="foot">
                   <p>${Math.round((Date.now()-tweet.created_at)/(100*60*60))} minutes ago<img class='hoverstate' src="pictures/flag.png"><img class='hoverstate' src="pictures/retweet.png"><img class='hoverstate' src="pictures/heart.png"></p>
                   </footer>
@@ -55,15 +55,11 @@ $(".textInTweet").submit(function(event){
   if($("textarea").val() == undefined || $("textarea").val() == null || $("textarea").val().replace(/\s/g, '').length === 0 || $('.counter').html() == 140){
     $('.flashMsg').append('Please make sure your message has content! ');
     setTimeout(function(){$('.flashMsg').html('')} , 3000);
-    return null;
-  }
 
-  if(  $('.counter').html() < 0 ){
+  }else if(  $('.counter').html() < 0 ){
     $('.flashMsg').append('Please make sure your message is shorter than 140 characters! ');
     setTimeout(function(){$('.flashMsg').html('')} , 3000);
-  }
-
-  else{
+  }else{
 
     $.ajax({
         method: 'POST',
