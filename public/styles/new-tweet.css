@@ -1,27 +1,28 @@
 .counter {
   float:right;
+  padding-right: 10px;
+  padding-top:5px;
 }
-section.newtweet{
-  width:400px;
+section .newtweet{
+  width:350px;
 }
 
 .new-tweet {
+  width:400px;
+  margin:20px 25px 20px 25px;
   background-color: lightgrey;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left:20px;
   border-radius: 10px;
-  height:150px;
-  margin-bottom: 32px;
+  height:160px;
 }
 
 .new-tweet h2 {
   border-bottom:1px solid;
-   width:400px;
+   width:350px;
    padding-bottom: 5px;
-
-
-
+   padding-top:5px;
 }
+
 article.tweetFeed {
   border-radius: 20px;
   background-color: white;
@@ -34,80 +35,70 @@ textarea {
   width:350px;
   margin: 50;
   border-radius: 20px;
-
 }
 
 .tweetFeed{
   width:450px;
-
   z-index: 0;
   margin-bottom: 10px;
-
-
 }
-header p {
-  height:50px;
-  background-color: white;
 
+header p {
+  height:80px;
+  background-color: white;
 }
 
 .head .userlogo {
-  height:50px;
-  width:50px;
-  margin-left:25px;
+  height:80px;
+  width:80px;
+  border-top-left-radius: 10px;
   float:left;
-  padding: 8px;
-  background-color: #eee;
-
+  padding: 10px;
+  background-color: lightgrey;
 }
+
 .username {
-  float:right;
-  width:125px;
-  margin-right:25px;
-  font-size: 100%;
-  line-height: 2.5;
-  background-color: #eee;
+  float:left;
+  width:128px;
+  border-top-right-radius: 10px;
+  font-size: 80%;
+  line-height: 4;
+  background-color: lightgrey;
   position:relative;
+  padding-left: 40px;
 }
 
 .foot {
   width:350px;
-  margin-left: 25px;
-
-
 }
 
 .name {
-  width:225px;
+  width:190px;
   margin:0;
   line-height: 1.6;
-  font-size: 200%;
-  background-color:#eee;
+  font-size: 175%;
+  background-color:lightgrey;
 }
-
 
 p.tweets {
   position:relative;
   width: 400px;
   height:80px;
-  margin-left: 25px;
   line-height: 3;
   padding-left: 10px;
-  border-top: 1px solid;
-  border-right: 1px solid;
-  border-left: 1px solid;
-
 }
 
 footer>p {
-
   position: relative;
   float:left;
-  border-top: 1px solid;
+  border-top: 1px inset ;
   width:400px;
-  margin: 0 0 15px 0;
+  margin: 0 0 0 0;
   background-color: ;
+  line-height: 2.3;
+  padding-left: 5px;
 }
+
 p.tweetrFunctions {
   width: 300px;
   float:right;
@@ -116,6 +107,7 @@ p.tweetrFunctions {
   position:relative;
   border-radius: 10px;
 }
+
 img .tweetrFunctions {
   width:10px;
   height:10px;
@@ -127,16 +119,17 @@ img .tweetrFunctions {
 .tweetFeed:hover img.hoverstate {
   visibility: visible;
 }
-.tweetFeed:hover .tweets {
-  background-color: lightgrey;
 
+.tweetFeed:hover .border {
+  opacity:1;
+  border:1.5px solid;
 }
-img.hoverstate {
 
+img.hoverstate {
   width:30px;
   height:30px;
   float:right;
-  margin:0 auto;
+  margin:0 5px 0 0 ;
   position:relative;
   visibility: hidden;
   border-radius: 10px;
@@ -157,4 +150,13 @@ img.hoverstate {
   width: 200px;
 }
 
-
+.border {
+ width:400px;
+ height:200px;
+ border:.5px solid;
+ margin-bottom: 10px;
+ margin-left: 25px;
+ margin-right: 0px;
+ opacity: .8;
+ border-radius: 10px;
+}

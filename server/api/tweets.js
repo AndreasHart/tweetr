@@ -10,7 +10,6 @@ module.exports = function(db) {
   tweets.get("/", function(req, res) {
       let tweets = db.getTweets( data => {
       return res.json(data);
-
       })
   });
 
@@ -31,7 +30,5 @@ module.exports = function(db) {
     db.saveTweet(tweet);
     return res.send();
   });
-
   return tweets;
-
 }
